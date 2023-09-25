@@ -59,7 +59,9 @@ int main(){
     int plus = two - one;
 
     if(plus > 0){ //condition : if element never exist
-        ans = plus + 1;
+
+        ans = plus + 1; //<-- this is for Array Indexing Start from 0 to n-1 (e.g. index : 4 == 5 | index : 7 == 8 
+
         cout<<"Occurence of k- "<<key<<" = "<<ans;
     }
     else{
