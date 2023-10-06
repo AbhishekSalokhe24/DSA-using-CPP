@@ -1,29 +1,31 @@
 #include<iostream>
 using namespace std;
-
-void Print_Number(int n){
-
-    if(n == 0){
-        return;
-    }
-    string digits[10] = {"zero","one","two","three","four","five","six","seven","eight","nine"}; 
-
-    
-    int t = n%10;
-    Print_Number(n/10); 
-    
-    cout<<" "<<digits[t]<<" ";
  
-}   
+void Bubble_Sort(int a[],int n){
+
+    for(int i = 1;i<n;i++){
+
+        for(int j = 0;j <n-1;j++){
+            if(a[j] > a[j+1]){
+                swap(a[j],a[j+1]);
+            }
+        }
+    }
+}
 
 
 int main() {
 
-    //print 123 = one two three
-    int num  = 0;
-    cout<<"Enter a number : "<<endl;
-    cin>>num;
-    Print_Number(num);
-
+    // Implement Bubble sort
+    int arr[6] = {6,5,4,3,2,1};
+    cout<<"Before"<<endl; 
+    for(int i = 0;i<6;i++){
+        cout<<" "<<arr[i]<<" ";
+    }
+    Bubble_Sort(arr,6);
+    cout<<endl<<"After"<<endl;
+    for(int i = 0;i<6;i++){
+        cout<<" "<<arr[i]<<" ";
+    }
     return 0;
 }
