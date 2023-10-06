@@ -14,8 +14,8 @@ int Sum_Arr(int arr[],int size){
     }
     int sum = 0;
     // Recursive call
-    int rem_sum = Sum_Arr(arr+1,size-1);
-    sum = arr[0] + rem_sum;
+    // int rem_sum = Sum_Arr(arr+1,size-1);
+    sum = arr[0] +Sum_Arr(arr+1,size-1);
     return sum;
 }
 

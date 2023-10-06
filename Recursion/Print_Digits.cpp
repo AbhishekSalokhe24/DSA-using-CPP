@@ -3,7 +3,7 @@ using namespace std;
 
 // if input: 123 output: one two three
 
-void Print_Numbers(int n,string arr[]){
+void Print_Numbers(long long int n,string arr[]){
     
     // Base case
     if(n == 0){
@@ -19,12 +19,12 @@ void Print_Numbers(int n,string arr[]){
 
 int main(){
 
-    // int n;
-    // cout<<"Enter a number : "<<endl;
-    // cin>>n;
+    long long int n;
+    cout<<"Enter a number : "<<endl;
+    cin>>n;
 
     string nums[10] = {"zero","one","two","three","four","five","six","seven","eight","nine"};
-    //Print_Numbers(n,nums);
-    cout<<(123/10);
+    Print_Numbers(n,nums);
+    
     return 0;
 }

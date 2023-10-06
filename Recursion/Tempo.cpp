@@ -1,35 +1,29 @@
 #include<iostream>
 using namespace std;
 
-int power(int a, int b) {
-    //base case
-    if( b == 0 )
-        return 1;
+void Print_Number(int n){
 
-    if(b == 1)
-        return a;
-
-    //RECURSIVE CALL
-    int ans = power(a, b/2);
-
-    //if b is even
-    if(b%2 == 0) {
-        return ans * ans;
+    if(n == 0){
+        return;
     }
-    else {
-        //if b is odd
-        return a * ans * ans;
-    }
-}
+    string digits[10] = {"zero","one","two","three","four","five","six","seven","eight","nine"}; 
+
+    
+    int t = n%10;
+    Print_Number(n/10); 
+    
+    cout<<" "<<digits[t]<<" ";
+ 
+}   
+
 
 int main() {
 
-    int a,b;
-    cin >> a >> b;
-    cout << endl;
-    int ans = power(a,b);
-
-    cout << "Answer is " << ans << endl;
+    //print 123 = one two three
+    int num  = 0;
+    cout<<"Enter a number : "<<endl;
+    cin>>num;
+    Print_Number(num);
 
     return 0;
 }
